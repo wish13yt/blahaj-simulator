@@ -5,8 +5,6 @@ let saved = JSON.parse(localStorage.answer);
 blahaj = saved;
 localStorage.answer = JSON.stringify(blahaj);
 
-blahajdisplay.innerHTML = "you currently have: " + blahaj + 0 + " blahaj";
-
 
 
 if (blahaj <= 1) {
@@ -62,6 +60,8 @@ function gambling() {
 }
 }
 
+function test() {
+    blahaj = saved;
+}
 
-
-
+test();
