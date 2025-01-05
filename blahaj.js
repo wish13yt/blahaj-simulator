@@ -1,10 +1,14 @@
 let blahajdisplay = document.getElementById("blahajcount");
 let blahajimg = document.getElementById("blahajimg");
+let blahaj = 0;
 let saved = JSON.parse(localStorage.answer);
-let blahaj = saved;
+blahaj = saved;
 localStorage.answer = JSON.stringify(blahaj);
 
-function blahaj2() {
+blahajdisplay.innerHTML = "you currently have: " + blahaj + 0 + " blahaj";
+
+
+
 if (blahaj <= 1) {
     blahajdisplay.innerHTML = "you currently have: " + blahaj + " blahaj";
     }
@@ -12,7 +16,7 @@ if (blahaj <= 1) {
     else if (blahaj >= 2) {
     blahajdisplay.innerHTML = "you currently have: " + blahaj + " blahajs";
     }
-}
+
 
 function clicked() {
 blahaj++;
@@ -58,6 +62,6 @@ function gambling() {
 }
 }
 
-blahaj2();
+
 
 
