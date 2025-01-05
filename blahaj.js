@@ -1,11 +1,18 @@
 let blahajdisplay = document.getElementById("blahajcount");
-let blahaj = 0;
 let blahajimg = document.getElementById("blahajimg");
 let saved = JSON.parse(localStorage.answer);
+let blahaj = saved;
 localStorage.answer = JSON.stringify(blahaj);
-blahaj = saved;
 
-blahajdisplay.innerHTML = "you currently have: " + blahaj + " blahaj";
+function blahaj2() {
+if (blahaj <= 1) {
+    blahajdisplay.innerHTML = "you currently have: " + blahaj + " blahaj";
+    }
+    
+    else if (blahaj >= 2) {
+    blahajdisplay.innerHTML = "you currently have: " + blahaj + " blahajs";
+    }
+}
 
 function clicked() {
 blahaj++;
@@ -24,4 +31,4 @@ document.getElementById('clicksound').play();
 localStorage.answer = JSON.stringify(blahaj);
 }
 
-blahaj = saved;
+blahaj2();
