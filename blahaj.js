@@ -31,6 +31,7 @@ setTimeout(() => {
 }, 100);
 document.getElementById('clicksound').play();
 localStorage.answer = JSON.stringify(blahaj);
+updatesmol();
 }
 
 function updatesmol() {
