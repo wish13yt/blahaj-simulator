@@ -33,6 +33,14 @@ document.getElementById('clicksound').play();
 localStorage.answer = JSON.stringify(blahaj);
 }
 
+function updatesmol() {
+    const smol = document.getElementById("smol-blahajs");
+    if(blahaj >= 1)
+        smol.innerHTML = "<img src=\"file (4).png\" alt=\"smol blahaj\" height=\"75\" width=\"75\">".repeat(blahaj - 1);
+    else
+        smol.innerHTML = "";
+}
+
 function gambling() {
     let inputElement = document.getElementById("gamble");
     let rawInput = inputElement.value;
@@ -57,6 +65,7 @@ function gambling() {
         blahajdisplay.innerHTML = "you currently have: " + blahaj + " blahajs";
         localStorage.answer = JSON.stringify(blahaj);
     }
+    updatesmol();
 }
 }
 
@@ -65,3 +74,4 @@ function test() {
 }
 
 test();
+updatesmol();
